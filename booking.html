@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Movie Seat Booking</title>
+  </head>
+  <header>
+	<nav style="opacity:unset;" >
+	  <h1 class="tic">MOVIE SEAT BOOKING</h1>
+	  <ul >
+		<a class="col"  href="index.html">HOME</a> &nbsp;
+		<a class="col" href="now-showing.html">NOW-SHOWING</a>
+		<a class="col" href="signin.html">SIGN IN</a>
+	  </ul>
+	</nav>
+	<div id="countdown"></div>
+  </header>
+  <body>
+	<div class="movie-container">
+      <label> Select a movie:</label>
+      <select id="movie">
+        <option value="220">PS-2 (RS.220)</option>
+        <option value="320">Leo (RS.320)</option>
+        <option value="250">Vaathi (RS.250)</option>
+        <option value="260">Jailer (RS.260)</option> 
+      </select>
+    </div>
+    <div class="search-container">
+      <label for="search-input">Search by movie title:</label>
+      <input type="text" id="search-input" placeholder="Enter movie title" />
+      <button id="search-btn" onclick="searchMovies()">Search</button>
+    </div><br>
+      <div class="filter-container">
+      <label for="genre">Filter by genre:</label>
+      <select id="genre">
+        <option value="all">All</option>
+        <option value="action">Action</option>
+        <option value="comedy">Comedy</option>
+        <option value="drama">Drama</option>
+        <option value="horror">Horror</option>
+        <option value="romance">Romance</option>
+        <option value="sci-fi">Sci-Fi</option>
+      </select>
+      <button id="filter-btn" onclick="filterMovies()">Filter</button>
+    </div>
+      <ul class="showcase">
+      <li>
+        <div class="seat"></div>
+        <small>Available</small>
+      </li>
+      <li>
+        <div class="seat selected"></div>
+        <small>Selected</small>
+      </li>
+      <li>
+        <div class="seat sold"></div>
+        <small>Sold</small>
+      </li>
+    </ul>
+    <div class="container">
+      <div class="screen"></div>
+       <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat "></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+        <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat sold"></div>
+        <div class="seat sold"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat sold"></div>
+        <div class="seat sold"></div>
+      </div>
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat sold"></div>
+        <div class="seat sold"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat sold"></div>
+        <div class="seat sold"></div>
+        <div class="seat sold"></div>
+        <div class="seat"></div>
+      </div>
+    </div>
+   <p class="text">
+		 Total number of seats booked <span id="count">0</span><br> Total price to be paid 
+		 RS.<span
+        id="total">0</span></p><br>
+	<span>	<button onclick="bookTicket()">Book now </button>&nbsp;
+			<button onclick="reset()">Cancel</button></span>
+		 <script src="script.js"></script>
+   </body>
+</html>
